@@ -2,7 +2,7 @@
     <div>
         <header>
             <nav>
-                <ul>
+                <ul class="flex">
                     <li><nuxt-link to="/">Home</nuxt-link></li>
                     <li><NuxtLink to="/products">Products</NuxtLink></li>
                     <li><NuxtLink to="/about">About</NuxtLink></li>
@@ -20,7 +20,9 @@
 
 
 <style scoped>
-
+li{
+    margin: 10px;
+}
 .router-link-active {
     color: teal;
 }

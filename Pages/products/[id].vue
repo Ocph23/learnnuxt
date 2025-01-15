@@ -1,6 +1,7 @@
 <template>
     <div>
-        param value :{{ id }}
+      Gambar  <img :src="dataView.value.image">
+       {{dataView.value.title}}
     </div>
 </template>
 
@@ -16,6 +17,13 @@ definePageMeta({
 var reoute = useRoute();
 
 const id = ref(reoute.params.id);
+const dataView = ref();
+
+const {data:product} = useFetch('https://fakestoreapi.com/products/'+id.value)
+dataView.value=product;
+if(!product.value){
+    createError({statusCode:404, statusMessage:"test"})
+}
 
 </script>
 
