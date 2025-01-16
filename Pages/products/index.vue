@@ -1,8 +1,9 @@
 <template>
     <div>
+        <h1>Ini Index Products</h1>
        <table class="table">
         <tbody>
-            <tr v-for="item in data">
+            <tr v-for="item in products">
               <td>{{ item.id }}</td>
               <td>{{ item.title }}</td>
               <td>{{ item.price }}</td>

@@ -1,8 +1,10 @@
 <template>
-    <div>
-      Gambar  <img :src="dataView.value.image">
-       {{dataView.value.title}}
-    </div>
+    <h1>Details</h1>
+        <button @click="showImage">ShowImage</button>
+        <div class="card m-10">
+            Gambar <img class="w-60 " :src="product.image">
+            {{ product.title }}
+        </div>
 </template>
 
 <script setup lang="ts">
@@ -17,16 +19,17 @@ definePageMeta({
 var reoute = useRoute();
 
 const id = ref(reoute.params.id);
-const dataView = ref();
+const dataView = ref({});
+const gambar = ref();
+const { data: product } = useFetch('https://fakestoreapi.com/products/' + id.value)
+if (!product.value) {
+    throw new Error('Not Found')
+}
 
-const {data:product} = useFetch('https://fakestoreapi.com/products/'+id.value)
-dataView.value=product;
-if(!product.value){
-    createError({statusCode:404, statusMessage:"test"})
+async function showImage() {
+    gambar.value = dataView.value;
 }
 
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
