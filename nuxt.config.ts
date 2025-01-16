@@ -4,6 +4,17 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
     '@nuxtjs/tailwindcss'
-  ]
+  ],
+  app:{
+    head:{
+      title:"Learn NuxtJs",
+      meta:[
+        {name:'description', content:'learn nuxt'}
+      ],
+      link:[
+        {rel:'stylesheet', href:'/assets/main.css'}
+      ]
+    }
+  }
 
 })

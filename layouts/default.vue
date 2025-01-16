@@ -1,6 +1,6 @@
 <template>
     <div>
-        <link rel="stylesheet" href="../assets/main.css">
+      
         <header>
 
             <nav>
@@ -9,7 +9,7 @@
                     <li><NuxtLink to="/products">Products</NuxtLink></li>
                     <li><NuxtLink to="/about">About</NuxtLink></li>
                     <li><NuxtLink to="/products/xxx">Error</NuxtLink></li>
-                    <li><NuxtLink to="https://youtu.be/dvanqBUoxhc?si=IFyPDqk2kZwW8zUk">Learn on Youtube</NuxtLink></li>
+                    <li><NuxtLink to="https://www.youtube.com/watch?v=MA76RDwfjH8">Learn on Youtube</NuxtLink></li>
                 </ul>
             </nav>
         </header>

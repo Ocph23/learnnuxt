@@ -1,11 +1,9 @@
 <script setup lang="ts">
-import Default from './default.vue';
 
 </script>
 
 <template>
 
-<Default>
     <div>
         <header>
             <nav>
@@ -18,7 +16,6 @@ import Default from './default.vue';
         </div>
        
     </div>
-</Default>
 
    
 </template>
